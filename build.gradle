@@ -1,0 +1,34 @@
+allprojects {
+    apply plugin: 'java'
+    
+    group 'com.github.uuidcode'
+    version '1.0-SNAPSHOT'
+
+    sourceCompatibility = 1.8
+    
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        testCompile 'junit:junit:4.12'
+        testCompile 'org.assertj:assertj-core:3.11.1'
+        compileOnly 'org.projectlombok:lombok:1.18.6'
+        annotationProcessor 'org.projectlombok:lombok:1.18.6'
+    }
+
+    task copy(type: Copy) {
+        from 'src'
+        into 'dest'
+    }
+
+    task zip(type: Zip) {
+        from 'src'
+    }
+
+    task hello {
+        doLast {
+            println 'Hello, World!'
+        }
+    }
+}

@@ -1,0 +1,4 @@
+rootProject.name = 'gradle-test2'
+include 'gradle-test2-core'
+include 'gradle-test2-api'
+
