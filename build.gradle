@@ -27,9 +27,35 @@ allprojects {
         from 'src'
     }
 
-    task hello {
+    task hello1 {
         doLast {
             println 'Hello, World!'
+        }
+    }
+
+    task hello2 {
+        doFirst {
+            println 'doFirst'
+        }
+
+        doLast {
+            println 'doLast'
+        }
+    }
+
+    task('hello3') {
+        doFirst {
+            println 'doFirst'
+        }
+
+        doLast {
+            println 'doLast'
+        }
+    }
+
+    task('hello4') {
+        doLast {
+            println "hello"
         }
     }
 }
